@@ -94,7 +94,22 @@ function hello ($name)
 hello ('大村');
 hello ('篠原');
 
+
 // Q11 関数-2
+
+// 関数の定義　説明書づくり
+function calcTaxInPrice ($price)
+{
+  return $price * 1.1;
+}
+
+// 変数の定義　材料の用意
+$price = 1000;
+
+$taxInPrice = calcTaxInPrice ($price);
+
+// 実行したものを表示
+echo $price.'円の商品の税込価格は' .$taxInPrice. '円です。';
 
 
 // Q12 関数とif文
