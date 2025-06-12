@@ -58,9 +58,34 @@ foreach ($array1 as $key => $value) {
 }
 
 // Q8 連想配列-2
+foreach ($array1 as $prefecture => $capital)
+{
+  // 代入ではなく=== (型も含め等しい)で！
+  if ($prefecture === '埼玉県')
 
+  echo $prefecture . 'の県庁所在地は、' . $capital . 'です。';
+}
+  
 
 // Q9 連想配列-3
+$array1['愛知県'] = '名古屋市';
+$array1['大阪府'] = '大阪市';
+
+$kantoArea = ['東京都','神奈川県','千葉県','埼玉県','栃木県','群馬県','茨城県'];
+
+foreach ($array1 as $key => $value) 
+{
+  if (in_array($key,$kantoArea))
+{
+  echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
+}else
+{
+  echo $key . 'は関東地方ではありません。' . "\n";
+}
+}
+
+
+
 
 
 // Q10 関数-1
