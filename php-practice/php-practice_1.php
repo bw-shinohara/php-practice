@@ -85,11 +85,14 @@ foreach ($array1 as $key => $value)
 }
 
 
-
-
-
 // Q10 関数-1
+function hello ($name)
+{
+  echo $name . 'さん、こんにちは。';
+}
 
+hello ('大村');
+hello ('篠原');
 
 // Q11 関数-2
 
