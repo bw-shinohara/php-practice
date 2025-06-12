@@ -14,6 +14,10 @@ $num = $num / 2;
 echo $num;
 
 // Q3 日付操作
+date_default_timezone_set('Asia/Tokyo');
+$now = date("Y年m月d日 H時i分s秒");
+
+echo '現在時刻は、'. $now .'です。';
 
 
 // Q4 条件分岐-1 if文
