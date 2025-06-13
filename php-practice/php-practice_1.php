@@ -131,6 +131,29 @@ echo distinguishNum (24);
 
 
 // Q13 関数とswitch文
+function evaluateGrade ($score)
+{
+  switch ($score)
+  {
+    case 'A':
+    case 'B':
+      return '合格です。';
+      break;
 
+    case 'C':
+      return '合格ですが追加課題があります。';
+      break;
+
+    case 'D':
+      return '不合格です。';
+
+    default:
+      return '判定不明です。講師に問い合わせてください。';
+      break;
+  }
+}
+
+echo evaluateGrade ('A');
+echo evaluateGrade ('Y');
 
 ?>
