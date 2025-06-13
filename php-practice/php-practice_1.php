@@ -113,6 +113,21 @@ echo $price.'円の商品の税込価格は' .$taxInPrice. '円です。';
 
 
 // Q12 関数とif文
+function distinguishNum ($x)
+{
+if ($x % 2 === 0)
+{
+  return $x . 'は偶数です。';
+}else
+{
+  return $x . 'は奇数です。';
+}
+
+}
+
+echo distinguishNum (11);
+echo distinguishNum (24);
+
 
 
 // Q13 関数とswitch文
