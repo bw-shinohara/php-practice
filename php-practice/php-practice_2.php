@@ -51,6 +51,27 @@ foreach ($personalInfos as $x => $y)
   echo $x + 1 . '番目の' .$personalInfos[$x]['name']. 'のメールアドレスは' .$personalInfos[$x]['mail']. 'で、電話番号は' .$personalInfos[$x]['tel']. 'です。';
 }
 
+// 問題3 
+$ageList = [25, 30, 18];
+
+foreach ($personalInfos as $key => $value)
+{
+  $personalInfos[$key]['age'] = $ageList[$key];
+}
+
+var_dump($personalInfos);
+
+
+// $days = ['Sun', 'Mon', 'Tue'];
+
+// $days[] = 'Wed'; // 配列の末尾に「Wed」を追加
+// var_dump($days);
+
+// $sales = ['yamada' => 150, 'tanaka' => 200];
+// $sales['suzuki'] = 250;
+// var_dump($sales);
+
+
 // Q3 オブジェクト-1
 
 
