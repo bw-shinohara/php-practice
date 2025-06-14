@@ -62,20 +62,53 @@ foreach ($personalInfos as $key => $value)
 var_dump($personalInfos);
 
 
-// $days = ['Sun', 'Mon', 'Tue'];
-
-// $days[] = 'Wed'; // 配列の末尾に「Wed」を追加
-// var_dump($days);
-
-// $sales = ['yamada' => 150, 'tanaka' => 200];
-// $sales['suzuki'] = 250;
-// var_dump($sales);
-
-
 // Q3 オブジェクト-1
+class Student
+{
+    public $studentId;
+    public $studentName;
+
+    public function __construct($id, $name)
+    {
+        $this->studentId = $id;
+        $this->studentName = $name;
+    }
+
+    public function attend()
+    {
+        echo '授業に出席しました。';
+    }
+}
+
+$yamada = new Student(120,'山田');
+var_dump($yamada);
+
+echo '学籍番号' .$yamada->studentId. 'の生徒は' .$yamada->studentName. 'です。';
+
 
 
 // Q4 オブジェクト-2
+class Student
+{
+    public $studentId;
+    public $studentName;
+
+    public function __construct($id, $name)
+    {
+        $this->studentId = $id;
+        $this->studentName = $name;
+    }
+
+    public function attend($lesson)
+    {
+        echo $this->studentName . 'は' .$lesson. 'の授業に参加しました。学籍番号：' . $this->studentId;
+    }
+}
+
+$yamada = new Student(120,'山田');
+$yamada->attend('PHP');
+
+
 
 
 // Q5 定義済みクラス
