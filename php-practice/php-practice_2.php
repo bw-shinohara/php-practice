@@ -112,4 +112,31 @@ $yamada->attend('PHP');
 
 
 // Q5 定義済みクラス
+$q5 = new DateTime;
+
+var_dump($q5);
+// object(DateTime)#1 (3) {
+//   ["date"]=>
+//   string(26) "2025-06-15 13:28:38.432360"
+//   ["timezone_type"]=>
+//   int(3)
+//   ["timezone"]=>
+//   string(3) "UTC"
+
+
+
+// 問題1
+$date = new DateTime("2021-03-02");
+$date->modify("-1 month");
+echo $date->format("Y-m-d");
+
+// 問題2
+$today = new DateTime("2021-03-02");
+$past = new DateTime("1992-04-25");
+$interval = $today->diff($past);
+echo "あの日から" . $interval->days . "日経過しました。";
+
+
+
+
 ?>
