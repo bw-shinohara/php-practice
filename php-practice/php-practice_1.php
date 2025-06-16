@@ -23,11 +23,9 @@ echo '現在時刻は、'. $now .'です。';
 // Q4 条件分岐-1 if文
 $device = 'windows';
 
-if ($device === 'windows' || $device === 'mac')
-{
+if ($device === 'windows' || $device === 'mac') {
   echo '使用OSは、' . $device . 'です。';
-}else
-{
+} else {
   echo 'どちらでもありません。';
 }
 
@@ -58,8 +56,7 @@ foreach ($array1 as $key => $value) {
 }
 
 // Q8 連想配列-2
-foreach ($array1 as $prefecture => $capital)
-{
+foreach ($array1 as $prefecture => $capital) {
   // 代入ではなく=== (型も含め等しい)で！
   if ($prefecture === '埼玉県')
 
@@ -73,13 +70,10 @@ $array1['大阪府'] = '大阪市';
 
 $kantoArea = ['東京都','神奈川県','千葉県','埼玉県','栃木県','群馬県','茨城県'];
 
-foreach ($array1 as $key => $value) 
-{
-  if (in_array($key,$kantoArea))
-{
+foreach ($array1 as $key => $value) {
+  if (in_array($key,$kantoArea)) {
   echo $key . 'の県庁所在地は、' . $value . 'です。' . "\n";
-}else
-{
+} else {
   echo $key . 'は関東地方ではありません。' . "\n";
 }
 }
@@ -96,33 +90,26 @@ hello ('篠原');
 
 
 // Q11 関数-2
-
-// 関数の定義　説明書づくり
 function calcTaxInPrice ($price)
 {
   return $price * 1.1;
 }
 
-// 変数の定義　材料の用意
 $price = 1000;
 
 $taxInPrice = calcTaxInPrice ($price);
 
-// 実行したものを表示
 echo $price.'円の商品の税込価格は' .$taxInPrice. '円です。';
 
 
 // Q12 関数とif文
 function distinguishNum ($x)
 {
-if ($x % 2 === 0)
-{
+if ($x % 2 === 0) {
   return $x . 'は偶数です。';
-}else
-{
+} else {
   return $x . 'は奇数です。';
 }
-
 }
 
 echo distinguishNum (11);
@@ -155,5 +142,3 @@ function evaluateGrade ($score)
 
 echo evaluateGrade ('A');
 echo evaluateGrade ('Y');
-
-?>

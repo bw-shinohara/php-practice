@@ -4,19 +4,13 @@ echo '1から100までのカウントを開始します' . "\n";
 
 for ($i = 1 ; $i <= 100 ; $i++)
 {
-  if ($i % 4 === 0 && $i % 5 === 0)
-  {
+  if ($i % 4 === 0 && $i % 5 === 0) {
     echo 'tic-tac' . "\n";
-  }elseif
-  ($i % 4 === 0)
-  {
+  } elseif ($i % 4 === 0) {
     echo 'tic' . "\n";
-  }elseif
-  ($i % 5 === 0)
-  {
+  } elseif ($i % 5 === 0) {
     echo  'tac' . "\n";
-  }else
-  {
+  } else {
     echo $i. "\n";
   } 
 }
@@ -46,16 +40,15 @@ var_dump($personalInfos);
 echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。';
 
 // 問題2
-foreach ($personalInfos as $x => $y)
-{
-  echo $x + 1 . '番目の' .$personalInfos[$x]['name']. 'のメールアドレスは' .$personalInfos[$x]['mail']. 'で、電話番号は' .$personalInfos[$x]['tel']. 'です。';
+foreach ($personalInfos as $x => $y) {
+  echo $x + 1 . '番目の' .$personalInfos[$x]['name']. 'のメールアドレスは'
+   .$personalInfos[$x]['mail']. 'で、電話番号は' .$personalInfos[$x]['tel']. 'です。';
 }
 
 // 問題3 
 $ageList = [25, 30, 18];
 
-foreach ($personalInfos as $key => $value)
-{
+foreach ($personalInfos as $key => $value) {
   $personalInfos[$key]['age'] = $ageList[$key];
 }
 
@@ -101,7 +94,8 @@ class Student
 
     public function attend($lesson)
     {
-        echo $this->studentName . 'は' .$lesson. 'の授業に参加しました。学籍番号：' . $this->studentId;
+        echo $this->studentName . 'は' .$lesson. 'の授業に参加しました。
+        学籍番号：' . $this->studentId;
     }
 }
 
@@ -135,8 +129,3 @@ $today = new DateTime("2021-03-02");
 $past = new DateTime("1992-04-25");
 $interval = $today->diff($past);
 echo "あの日から" . $interval->days . "日経過しました。";
-
-
-
-
-?>
